@@ -1,1 +1,2 @@
-# FemmeHacks---Jasmine-Aditi-Margaret-and-Emily
+# Hackathon-Project-
+FemmeHacks Project 2017 
