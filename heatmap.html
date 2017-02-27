@@ -102,7 +102,7 @@ function changeRadius() {
 }
 
 function changeOpacity() {
-  heatmap.set('opacity', heatmap.get('opacity') ? null : 0.5);
+  heatmap.set('opacity', heatmap.get('opacity') ? null : 0.3);
 }
 
 
@@ -111,7 +111,7 @@ function getPoints() {
 console.log("hello");
 for (var i=0; i<schools.length; i++)
 {
-  schools[i].percent=schools[i].percent*3;
+  schools[i].percent=schools[i].percent*2;
 }
 var points=[];
   for(var i=0; i<schools.length; i++) {
