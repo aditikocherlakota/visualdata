@@ -38,7 +38,7 @@ schools.push({lat: 39.99532, long: -75.105978, percent: 81.18});
 schools.push({lat: 39.975334, long: -75.203197, percent: 82.35});
 schools.push({lat: 39.995108, long: -75.166577, percent: 84.44});
 schools.push({lat: 39.965088, long: -75.163095, percent: 85.71});
-schools.push({lat: 38.623091, long: -90.534202, percent: 87.91});
+schools.push({lat: 38.623091, long: -75.215, percent: 87.91});
 schools.push({lat: 40.008613, long: -75.179677, percent: 89.47});
 schools.push({lat: 39.944298, long: -75.242326, percent: 90.77});
 schools.push({lat: 39.985854, long: -75.154346, percent: 93.44});
@@ -49,7 +49,7 @@ schools.push({lat: 39.939963, long: -75.161103, percent: 94.55});
 schools.push({lat: 39.939394, long: -75.165266, percent: 95.88});
 schools.push({lat: 39.962942, long: -75.159463, percent: 96.23});
 schools.push({lat: 39.950253, long: -75.152409, percent: 96.43});
-schools.push({lat: 34.7368, long: -92.298687, percent: 96.93});
+schools.push({lat: 40.037405, long: -75.150317, percent: 96.93});
 schools.push({lat:40.05634, long: -75.165356, percent: 97.26});
 schools.push({lat: 40.082643, long: -75.165356, percent: 97.54});
 schools.push({lat: 39.955736, long: -75.176133, percent: 97.58});
@@ -98,7 +98,7 @@ function changeGradient() {
 }
 
 function changeRadius() {
-  heatmap.set('radius', heatmap.get('radius') ? null : 40);
+  heatmap.set('radius', heatmap.get('radius') ? null : 35);
 }
 
 function changeOpacity() {
@@ -109,6 +109,10 @@ function changeOpacity() {
 // Heatmap data: 500 Points
 function getPoints() {
 console.log("hello");
+for (var i=0; i<schools.length; i++)
+{
+  schools[i].percent=schools[i].percent*3;
+}
 var points=[];
   for(var i=0; i<schools.length; i++) {
       //  alert(schools[i]);
